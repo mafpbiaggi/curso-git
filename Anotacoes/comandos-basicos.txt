@@ -90,3 +90,38 @@ Comandos básicos
             $ git log --oneline
                 dcce929 (HEAD -> main) curso-git(add): Criação do arquivo .gitignore.
                 dde5056 curso-git(add/Anotacoes): Criação da primeira versão do arquivo 'comandos-basicos.txt'.
+
+- git checkout
+    Navega entre branches ou recupera arquivos de repositórios.
+    Ex: Criação de uma nova branch com o conteúdo atual e alterna para ela.
+        $ git checkout -b dev
+            Switched to a new branch 'dev'
+
+    Recuperação de arquivo apagado, sem que tenha havido commit
+        $ ls
+            index.html
+        $ rm index.htlm (apaga o arquivo)
+        $ git checkout -- index.html (restaura o arquivo do último commit válido (HEAD))
+
+    Recuperação de arquivo apagado, com commit
+        $ git checkout dde5056 . (volta o conteúdo do commit de ID dde5056)
+        $ git commit -m "Novo commit com o conteúdo requerido"
+        Nesse caso é necessário um novo commit para que fique registrado no log e a versão válida volte para o HEAD,
+        criando um novo registro no log.
+
+- git revert
+    Reverte o estado atual do repositório para algum commit específico, mas cria um novo commit como resultado.
+    Ex:
+        $ git revert --no-edit HEAD
+            [main 327ba21] Revert "curso-git(upd): Alteração do arquivo 'index.html' - <h1>Alyne</h1>."
+            Date: Mon Nov 10 20:09:33 2025 -0300
+            1 file changed, 1 insertion(+), 1 deletion(-)
+    
+- git reset
+    Redefine o cabeçalho para o commit anteior mais próximo.
+    Ex: Move o HEAD para o estado do commit escolhido, desconsiderando quaisquer commits posteriores.
+        $ git reset --hard 2f24083
+            HEAD is now at 2f24083 curso-git(add): Criação da primeira versão do arquivo 'index.html'.
+
+    Observação: Diferente do revert, ele não cria um novo commit, pelo contrário, ele exclui todos os registrados
+                que poderiam ser encotrados depois do commit especificado.  
