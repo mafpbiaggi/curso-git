@@ -51,3 +51,42 @@ Comandos básicos
 - git commit 
     Registra ("commita") as modificações salvas em uma versão.
     Ex: Registra a criação do arquivo comandos-básicos.txt até esta linha.
+        $ git commit -m "curso-git(add/Anotacoes): Criação da primeira versão do arquivo 'comandos-basicos.txt'."
+            [main dde5056] curso-git(add/Anotacoes): Criação da primeira versão do arquivo 'comandos-basicos.txt'.
+            1 file changed, 53 insertions(+)
+            create mode 100644 Anotacoes/comandos-basicos.txt
+
+    Observações:
+        Parâmetros:
+         $ git commit -m (adiciona uma mensagem a versão).
+         $ git commit -a (mesma função do git add -A).
+         $ git commit -am (simplificação dos comandos -a [--all] e -m [--message]).
+         $ git commit --amend --no-edit (Faz alterações no commit passado sem alterar a mensagem. Usado para pequenas correções, sem a necessidade de um novo commit).
+
+        Arquivos importantes:
+            .gitignore: Não registra no commit os arquivos, ou extensões presentes no arquivo.
+                Ex: .bak .~ => arquivos de backup e temporários respectivamente.
+  
+            .git-keep: Permite o registro de um diretório vazio na versão (commit).
+                      Caso contrários, os diretórios vazios são ignorados por padrão
+
+- git log
+    Exibe todos as versões (commits) realizados no repositório
+    Ex: Saída completa do log
+        $ git log
+            commit dcce929de4efc61e20a6d43c88c3072073d4d720 (HEAD -> main)
+                Author: Marco Aurélio Biaggi <mafpbiaggi@gmail.com>
+                Date:   Mon Nov 10 19:30:35 2025 -0300
+
+                    curso-git(add): Criação do arquivo .gitignore.
+
+                commit dde50564f999499ca33e246cb694ef65d5628836
+                Author: Marco Aurélio Biaggi <mafpbiaggi@gmail.com>
+                Date:   Mon Nov 10 19:12:13 2025 -0300
+
+                    curso-git(add/Anotacoes): Criação da primeira versão do arquivo 'comandos-basicos.txt'.
+        
+        Saída simplificada do log (sem autor e data de execução)
+            $ git log --oneline
+                dcce929 (HEAD -> main) curso-git(add): Criação do arquivo .gitignore.
+                dde5056 curso-git(add/Anotacoes): Criação da primeira versão do arquivo 'comandos-basicos.txt'.
