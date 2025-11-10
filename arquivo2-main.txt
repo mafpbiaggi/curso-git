@@ -1,1 +1,0 @@
-Arquivo criado e populado diretamente na branch main, depois de ter criado e commitado conteúdo em outra branch.
