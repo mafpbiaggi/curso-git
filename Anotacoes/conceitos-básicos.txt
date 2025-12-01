@@ -1,0 +1,120 @@
+Git
+
+    Um VCS (sistema de controle de versão) é um programa ou um conjunto de programas que controla as alterações
+    feitas em uma coleção de arquivos. Uma meta de um VCS é recuperar com facilidade as versões anteriores de 
+    arquivos individuais ou do projeto inteiro. Outra meta é permitir que vários membros da equipe trabalhem 
+    em um projeto, até mesmo nos mesmos arquivos, simultaneamente sem afetar uns aos outros.
+
+    Outro nome para um VCS é sistema de SCM (gerenciamento de configuração de software).
+
+    Terminologia do gerenciamento
+    
+        Árvore, Repositório, Hash, Objetivo, Commit, Branch, Remoto, Comandos, Subcomandos e Opções.
+
+GitHub
+
+    O GitHub se baseia no Git adicionando ferramentas de colaboração, recursos de automação e uma 
+    interface da Web amigável. Entender as noções básicas do Git, como confirmações, branches e mesclagem,
+    ajudará você a usar o GitHub com mais eficiência.
+
+
+    Repositórios
+
+        Um repositório é um espaço que contém os arquivos do projeto e o histórico de revisão de cada
+        arquivo.
+
+        - Visibilidade
+            -- Público -> Disponível para toda a internet
+            -- Privado -> Acesso controlado
+        
+        - Clonagem
+            Criar uma cópia de um repositório remoto (GitHub), na sua máquina local.
+
+    Gists
+    
+        Mini repositórios para compartilhamento de snippets de código, anotações ou outras pequenas
+        informações.
+
+        - Visibilidade
+            -- Públicos
+            -- Secretos
+
+        Nenhum Gist é totalmente secreto, caso alguém tenha o link do Gist ele pode ser acessado, ainda que
+        sua visibilidade seja secreta. Não adicionar conteúdo sensível e confidencial.
+
+    Wiki
+    
+        Sessão de documentação de um repositório. Maior do que o README.md, permite documentação adicional
+        do projeto.
+
+Diferença entre o Git e o GitHub.
+
+    O Git é um sistema de controle de versão, já o GitHub é uma plataforma na núvem que utiliza o Git como
+    sua tecnologia principal.
+
+
+Mais conceitos
+
+    Branches
+
+        É uma cópia do projeto dentro do próprio projeto. Que permite a alteração de código sem afetar a
+        estrutura principal.
+
+    Commits
+
+        É uma confirmação de alteração. Ela quem registra uma alteração válida, com data, hora e autor.
+        Através dos commits, temos a trilha de auditoria clara de um projeto.
+
+    Pull
+
+        Mecanismo de sinalização de confirmações (commits de uma branch) prontas para serem mescladas
+        em outra branch.
+
+    GitHub Flow
+
+        Fluxo de trabalho do GitHub, permite que todo fluxo de desenvolvimento de um projeto aconteça
+        de maneira simplifacada, estruturada e monitorada. Através dele, é possível verificar em
+        qual estado está o desenvolvimento, registrar as versões válidas para lançamento e excluir
+        brnaches de desenvolvimento desnecessárias.
+
+        Diferente do Fluxo do Git (mais antigo e no qual foi baseado), o GitHub Flow, é mais enxuto enxuto,
+        pois mantém a branch principal (main) e apenas uma branch para desenvolvimento de uma feature, por exemplo.
+
+
+    Git Flow
+
+        Tipo de flxo mais antigo e com mais separações:
+
+            master: sempre reflete o código pronto para produção.
+            develop: contém o trabalho de desenvolvimento mais recente para a próxima versão.
+            feature/*: usado para criar novos recursos; ramificado e develop mesclado novamente quando concluído.
+            release/*: prepara uma nova versão de produção de develop; permite testes finais e pequenas correções de bug.
+            hotfix/*: usado para corrigir rapidamente problemas de produção; ramificado de master.
+
+
+    Quando usar o fluxo do Git ao invés do GitHub Flow
+        
+        - Mais adequado para projetos com versões agendadas ou com versão
+        - Útil se você mantiver várias versões de produção (por exemplo, branches de suporte de longo prazo)
+        - Ideal para ciclos de desenvolvimento mais lentos e estruturados (por exemplo, ambientes corporativos ou regulamentados)
+        - Considerado mais "pesado" do que o GitHub Flow devido ao gerenciamento de branch adicional
+
+    Problemas (Issues)
+
+        São usados para rastrear ideias, comentários, tarefas ou bugs. Podem ser criados à partir de:
+
+            - Repositórios
+            - Observação do projeto
+            - Comentário (de problema ou pull request)
+            - Linha específica do código
+            - Consulta de URL
+
+    Discussões (Discussions)
+
+        Sessão projetada para discussão, dúvidas, sugestões que podem, ou não estar diretamente ligadas ao
+        código.
+
+    GitHub Pages
+
+        É um recurso do GitHub que permite a publicação de um site diretamente de um repositório. Ele é umserviço
+        hospedagem de sites.
