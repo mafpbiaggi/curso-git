@@ -1,0 +1,141 @@
+Tipos de conta do GitHub
+
+    - Pessoal: Conta padrão
+    - Organização: São contas compartilhadas em que várias pessoas podem compartilhar em vários rapositórios (projetos) diferentes.
+    - Enterprise: Uma conta mais completa do que a organização. Numa conta corporativa, é possível ter várias organizações
+                  com configurações diferentes e políticas definidas.
+
+    Principal diferença entre um plano Pessoal e Organizacional está nos recursos e quantidade de colaboradores para
+    repositórios privados.
+
+Planos:
+
+    - GitHub Free
+    - GitHub Pro
+    - GitHub para Equipes
+    - GitHub Enterprise
+
+As principais diferenças então nos recursos, capacidades, espaço disponível e gestão permitida.
+A cada novo plano, novos recursos são habilitados e novos limites são definidos. Principalmente, voltado ao
+GitHub actions que permite automatização de processos.
+
+Importante lembrar que o GitHub Enterprise tem duas versões o Server e o Cloud.
+    - Server (GHES - GitHub Enterprise Server) é uma ferramenta auto-hospedada e pode ser utilizada na infraestrutura
+    da empresa.
+
+    - Cloud (GHEC) é um serviço que adiciona minutos do GitHub Actions.
+
+
+Estatística de uso de licença:
+
+É possível fazer esse controle em contas enterprise, seja na versão Server ou Cloud.
+Na versão cloud é possível utilizar a API do GitHub
+
+    - Licenças para contas corporativas
+    curl -H "Authorization: token YOUR-TOKEN" \
+    "https://api.github.com/enterprises/YOUR-ENTERPRISE/license"
+
+    - Licenças para várias instâncias do GitHub
+    curl -H "Authorization: token YOUR-TOKEN" \
+    "https://api.github.com/enterprise/settings/licenses"
+
+
+Práticas recomendadas para o gerenciamento de uso de licenças
+
+    - Automatizar o monitoramento – use consultas de API REST ou GraphQL para acompanhar as tendências de uso.
+    - Recuperar assentos não utilizados – identifique usuários inativos e libere licenças não utilizados.
+    - Habilitar a cobrança baseada em uso – alinhe a cobrança com o consumo real.
+    - Auditar regularmente – realize revisões mensais ou trimestrais para controlar os custos.
+
+Contas de Computador
+
+    As contas de computador são contas do GitHub usadas para automação, execução de scripts ou integração com ferramentas de terceiros.
+
+    Características: - Eles atuam independentemente dos usuários humanos. - Geralmente usado por ferramentas
+    de CI/CD (por exemplo, GitHub Actions, Jenkins, CircleCI).- Cada conta de computador consome uma licença
+    do GitHub, como um usuário padrão.
+
+Serviços Periféricos
+
+    Os Serviços Periféricos são integrações externas que interagem com o GitHub por meio de solicitações de API.
+    Exemplos: – Pipelines de CI/CD (por exemplo, GitHub Actions, GitHub Runners, Jenkins).- Ferramentas de Verificação de Segurança (por exemplo, Dependabot, Snyk, CodeQL).- Integrações de terceiros (por exemplo, Slack, Jira, Datadog).- Auto-hospedados do GitHub.
+
+Por que acompanhar isso?
+
+    Para identificar licenças não utilizados ou excessivas.
+    Para otimizar os custos e evitar gastos desnecessários.
+    Para monitorar riscos de segurança de contas de automação inativas ou configuradas incorretamente.
+
+Práticas recomendadas para gerenciar contas de máquina e licenças de serviços periféricos
+
+    - Auditar contas do computador regularmente: identificar e desativar contas de computador não utilizados.
+        -- Com o tempo, as organizações acumulam contas de computador não utilizados ou obsoletas que ainda podem ter acesso a repositórios e sistemas.
+        -- As contas não usadas aumentam os riscos de segurança, pois podem ser exploradas se comprometidas.
+        -- Auditorias regulares garantem que existam apenas contas de computador ativas e necessárias , reduzindo a exposição ao acesso não autorizado.
+
+    - Monitorar o uso da API: acompanhe as ferramentas de terceiros que consomem licenças empresariais.
+        -- Muitos aplicativos de terceiros, pipelines de CI/CD e integrações consomem recursos da API do GitHub e licenças empresariais.
+        -- Chamadas excessivas à API podem levar a limites de taxa, afetando os fluxos de trabalho dos desenvolvedores.
+        -- O uso não autorizado ou desconhecido da API pode expor vulnerabilidades de segurança e dados confidenciais.
+
+    - Otimizar uso do executor: identifique executores autogerenciados ociosos e reduza custos do executor hospedado no GitHub.
+        -- Runners auto-hospedados e hospedados no GitHub executam fluxos de trabalho de CI/CD. O uso ineficiente leva a custos desnecessários.
+        -- Runners auto-hospedados ociosos desperdiçam recursos computacionais e podem expor as organizações a riscos de segurança se não forem monitorados.
+        -- Os executores hospedados no GitHub operam de forma paga conforme o uso e a otimização do uso pode reduzir significativamente os custos.
+
+    - Restringir contas de máquina: limite as suas permissões e imponha políticas de segurança.
+        -- As contas de computador não devem ter acesso desnecessário a repositórios, reduzindo o risco de escalonamento de privilégios.
+        -- Se comprometidas, as contas de computador podem ser exploradas para manipular o código-fonte, implantar alterações mal-intencionadas ou expor segredos.
+        -- A imposição de políticas de segurança ajuda a garantir a conformidade e minimiza possíveis violações.
+
+    Acompanhar o uso de licenças para contas de computador e serviços periféricos é crucial para otimização de custos, segurança e 
+    conformidade no GitHub Enterprise. Os administradores devem aproveitar a interface do usuário do GitHub, o GraphQL e as APIs REST
+    para identificar contas inativas, otimizar o uso e evitar gastos desnecessários.
+
+
+    GitHub Mobile
+O GitHub para Dispositivos Móveis lhe oferece uma maneira de produzir um trabalho de alto impacto no GitHub rapidamente e de qualquer lugar. O GitHub para Dispositivos Móveis é uma maneira segura e protegida de acessar seus dados no GitHub por meio de um aplicativo cliente confiável, criado pela própria plataforma. O GitHub Mobile está disponível para dispositivos iOS e Android.
+
+Com o GitHub para Dispositivos Móveis, você pode:
+
+Gerencie, faça triagem e limpe as notificações de github.com marcando-as como threads de leitura, mudo ou filtragem por tipo.
+Ler, analisar e colaborar em problemas e solicitações de pull.
+Editar arquivos nas solicitações de pull.
+Pesquisar, navegar e interagir com usuários, repositórios e organizações.
+Receber uma notificação por push quando alguém mencionar seu nome de usuário.
+Agende suas notificações por push para horários personalizados específicos.
+Proteger sua conta no GitHub.com com uma autenticação de dois fatores.
+Verificar suas tentativas de login em dispositivos não reconhecidos.
+Execute tarefas leves do GitHub quando estiver longe da área de trabalho.
+GitHub Desktop
+O GitHub Desktop é um aplicativo de software livre que ajuda a simplificar o fluxo de trabalho do Git. O aplicativo facilita a colaboração entre você e sua equipe e o compartilhamento de boas práticas do Git e do GitHub dentro da sua equipe. O GitHub Desktop está disponível para Windows e macOS.
+
+Aqui estão algumas das várias coisas que você pode fazer com o GitHub para Desktop:
+
+Adicione repositórios ao GitHub Desktop para gerenciar projetos existentes localmente.
+Clone repositórios do GitHub para configurar rapidamente projetos localmente e começar a trabalhar.
+Adicione alterações à sua confirmação interativamente, facilitando o gerenciamento e a revisão das alterações antes de se comprometer.
+Adicione rapidamente coautores à sua confirmação, garantindo a atribuição adequada em projetos colaborativos.
+Faça check-out de branches com solicitações de pull para examinar e colaborar em alterações de código.
+Exiba os status de CI para garantir a qualidade do código e simplificar a colaboração.
+Compare as imagens alteradas para examinar visualmente as atualizações em arquivos de imagem.
+
+Opções do GitHub Enterprise
+Existem duas opções diferentes do GitHub Enterprise:
+
+GitHub Enterprise Server
+GitHub Enterprise Cloud
+A diferença mais significativa entre o GitHub Enterprise Server (GHES) e o GitHub Enterprise Cloud é que o GHES é uma solução auto-hospedada que permite que as organizações tenham controle total sobre sua infraestrutura.
+
+A outra diferença entre o GHES e o GitHub Enterprise Cloud é que o GitHub Enterprise Cloud inclui um aumento drástico nos minutos do GitHub Actions e no armazenamento de Pacotes do GitHub.
+
+Aqui estão os recursos adicionais do GitHub Enterprise Cloud:
+
+50.000 minutos do GitHub Actions por mês
+50 GB de armazenamento dos pacotes do GitHub
+Um contrato de nível de serviço de tempo de atividade mensal de 99,9%
+Opção para gerenciar de forma centralizada a política e a cobrança para várias organizações do GitHub.com uma conta corporativa
+Opção para provisionar e gerenciar as contas de usuários para seus desenvolvedores, utilizando o Usuários Gerenciados pela Empresa
+
+EMU (Usuários Gerenciados da Empresa)
+Os Usuários Gerenciados da Empresa permitem que as organizações controlem identidades usando seu provedor de identidade, habilitando o gerenciamento de acesso central e a maior segurança.
