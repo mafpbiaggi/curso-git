@@ -1,0 +1,98 @@
+Objetivos do aprendizado
+
+    - Entenda como o GitHub Copilot pode ajudar você a codificar oferecendo sugestões de estilo de preenchimento automático.
+    - Entenda as várias maneiras de disparar o GitHub Copilot.
+    - Compreenda as diferenças entre o GitHub Copilot Free, Pro, Business e Enterprise.
+    - Saiba como configurar o GitHub Copilot.
+    - Saiba como solucionar problemas do GitHub Copilot.
+
+Vantagens:
+
+    ajuda na colaboração
+    no desenvolvimento
+    no teste
+    no lançamento dos produtos com mais rapidez e eficiência do que nunca.
+
+Benefícios reconhecidos:
+
+    - 46% do novo código sendo escrito por IA
+    - 55% mais rapidez na produtividade geral do desenvolvedor
+    - 74% dos desenvolvedores se sentem mais focados em um trabalho mais satisfatório
+
+Recursos:
+
+    - Chat -> Interativo com o desenvolvedor
+    - Pull Requests -> Auxilia na criação de textos e descrição de pull-requests
+    - CLI -> Auxilia o desenvolvedor diretamente na CLI do Terminal, preenchendo comandos e sugerindo possibilidades
+
+Planos:
+
+    - Gratuíto
+        -- Conclusões de código em editores com suporte
+        -- Conclusões mensais limitadas e solicitações de chat
+        -- Acesso a modelos avançados de IA
+
+    - Pro
+        -- Conclusões de código ilimitadas e solicitações de chat
+        -- Acesso prioritário aos modelos de IA mais recentes
+        -- Sugestões e explicações avançadas de código
+        -- Integração com IDEs com suporte (VS Code, Visual Studio, JetBrains, Neovim)
+        -- Recursos automatizados de geração de teste e explicação de código
+
+    - Pro +
+        -- Todos os recursos do Pro
+        -- Capacidade de solicitação premium adicional
+        -- Acesso prioritário à infraestrutura
+
+    - Business
+        -- Todos os recursos pro e pro+ para membros da organização
+        -- Controles de política e gerenciamento centralizados
+        -- Filtragem de vulnerabilidade de segurança
+        -- Referência de código e filtragem de código público
+        -- Indenidade de IP e segurança, segurança e privacidade de nível empresarial
+        -- Chat no IDE e em dispositivos móveis
+        -- Filtro para código público
+
+    - Enterprise
+        -- Todos os recursos de Negócios
+        -- Sugestões de código personalizadas com base no código interno/privado
+        -- Integração com o GitHub Enterprise Cloud
+        -- Geração de pesquisa e documentação alimentada por IA em sua base de código
+        -- Suporte avançado à solicitação de pull com resumos e marcas de IA
+        -- Personalização em toda a organização e ajuste fino de modelos copilot
+        -- Integração profunda com o GitHub para chat e exploração de base de código.
+
+        O GitHub Copilot Enterprise inclui tudo que o GitHub Copilot Business oferece, com uma camada adicional de personalização para organizações.
+        Ele permite integração com o GitHub em uma interface de chat, possibilitando conversas sobre a base de código. Também apresenta botões de ação
+        em toda a plataforma.
+
+        O GitHub Copilot Enterprise é capaz de indexar a base de código de uma organização para uma compreensão mais profunda e oferecer sugestões mais
+        personalizadas. Também fornece acesso à personalização do GitHub Copilot para ajustar modelos privados para preenchimento automático de código.
+
+Maneiras de interação:
+
+    - Sugestões embutidas
+        -- Auto preenchimento de sugestões à medida que se digita em um código
+    
+    - Paleta de comandos
+        -- Usando Ctrl+Shift+P no VS Code
+
+    - Chat do Copilot
+        -- Realizando prompts com o chatbot
+
+    - Chat embutido
+        -- Acionando o chat diretamente no código Ctrl+I no VS Code
+        --- Atalhos
+            /explain - Fornece uma explicação do código selecionado.
+            /suggest – Oferece sugestões de código com base no contexto atual.
+            /tests – Gera testes de unidade para a função ou classe selecionada.
+            /comment - Converte comentários em snippets de código.
+
+    - Comentários
+        -- O Copilot é capaz de gerar código através dos comentários inseridos no código.
+
+Benefícios
+
+    - Várias sugestões
+    - Explicações de código (ou trechos)
+    - Geração de teste automatizados
