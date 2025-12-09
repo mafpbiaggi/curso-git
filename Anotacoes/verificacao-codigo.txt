@@ -1,0 +1,108 @@
+Objetivos de aprendizagem
+    
+    - Descreva a verificação de código.
+    - Listar as etapas para habilitar a verificação de código em um repositório.
+    - Listar as etapas para habilitar a verificação de código com análise de terceiros.
+    - Compare como implementar a análise do CodeQL em um fluxo de trabalho do GitHub Actions versus uma ferramenta de integração contínua (CI) de terceiros.
+    - Explicar como configurar a verificação de código em um repositório usando o gatilho de eventos.
+    - Comparar a frequência dos fluxos de trabalho de verificação de código (agendado versus disparados por eventos).
+
+CodeQL
+
+    O CodeQL é o mecanismo de análise de código desenvolvido pelo GitHub. Essa ferramentas pode ser habilitada em repositórios públicos (todos os planos) 
+    e privados (somente para organizações). É possível habilitar o CodeQL de três maneiras:
+
+        - Use a configuração padrão para configurar rapidamente a análise do CodeQL para verificação de código em seu repositório. 
+        A configuração padrão manipula a escolha dos idiomas a serem analisados, o pacote de consultas a ser executado e os eventos
+        que disparam verificações com a opção de configurar manualmente os idiomas e os pacotes de consultas. Esta opção de instalação
+        executa a verificação de código como uma ação do GitHub.
+
+        - Use a configuração avançada para adicionar o fluxo de trabalho do CodeQL diretamente ao seu repositório. Adicionar o fluxo de
+        trabalho CodeQL diretamente em seu repositório gera um arquivo de fluxo de trabalho personalizável, que usa github/codeql-action
+        para executar a CLI do CodeQL como uma ação do GitHub.
+
+        - Execute a CLI do CodeQL diretamente em um sistema de CI externo e carregue os resultados no GitHub.
+
+    A ferramenta trata o código como dados. Portanto, você gera um banco de dados CodeQL para representar sua base de código e, em seguida
+    executa consultas a essa base. Os resultados são mostrados como alertas de varredura.
+
+    Linguagens suportadas/compatíveis:
+    
+        C ou C++
+        C#
+        Go
+        Java/Kotlin
+        JavaScript/TypeScript
+        Python
+        Ruby
+        Swift
+
+    Habilitar a verificação de código com a ferramenta do GitHub
+        
+        - Vá nas configurações avançadas de segurança do repositório:
+            -> Settings / Advanced Security / CodeQL
+        E defina as configurações (Padrão ou avançada) para aquele repositório.
+
+        Obs: A verificações são consideradas ações do GitHub, portanto passíveis de cobrança
+        dependendo do plano. O GitHub actions é quem controla o faturamento das verificações.
+
+    Habilitar a verificação de código com ferramentas de terceiros
+
+        - Importando arquivos SARIF 2.1.0 através de:
+
+            -- API do GitHub
+            -- CLI do CodeQL
+            -- GitHub Actions
+                --- Para não incluir alertas duplicados, a diretiva partialFingerprints é utilizado. Caso não haja referência no arquivo .yml
+                o GitHub tentará preencher o campo usando os arquivos de origem.
+                --- É possível carregar um arquivo SARIF gerado como parte de um fluxo de trabalho CI.
+
+
+        Limitações do arquivo SARIF
+            - Até 5000 resultados por upload. Todos os resultados acima de 5000 são ignorados.
+            - Até 10MB compactado gzip. Todos os uploadis acima desse limite são rejeitados.
+
+        Métodos para uso no arquivo .yml
+        - upload-sarif
+
+    Configurações de varredura de código
+
+        Configurar o método padrão permite uma verificação pré-definida pelo GitHub, no entanto, é possível utilizar uma configuração personalizada
+        utilizando as configurações avançadas de verificação.
+
+        Nelas, é possível personalizar o arquivo .github/workflows/codeql.yml com as diretivas que melhor se enquadrarem no fluxo de trabalho desejado.
+
+        Varreduras padrão:
+            - em ações dos tipos: push ou pull_request
+            - em agendamento definido: cron
+
+        Atenção: Se uma solicitação de pull for de uma bifurcação privada, o evento pull_request só será disparado se você tiver selecionado a
+        opção "Executar fluxos de trabalho da bifurcação de solicitações de pull" nas configurações do repositório. Se você verificar as pull requests,
+        os resultados serão exibidos como alertas em uma verificação de pull request.
+        
+        É importante verificar as Regras de proteção, pois somente os seguintes tipos de falhas geram alertas de pull_request:
+        - Segurança: Alta ou Superior (Critial ou High)
+        - Outros: Erros (Error)
+
+        Evitar varreduras desnecessárias (menor custo no GitHub Actions) para determinados arquivos:
+        - Usar a diretiva on:pull_request:paths-ignore
+            Exemplos: Arquivos que não oferecem risco de execução
+            
+            '**/*.md'
+            '**/*.txt'
+
+        Exemplo de configuração de arquivo codeql.yml
+
+            on:
+                push:
+                    branches: [main, protected]
+                pull_request:
+                    branches: [main]
+                schedule:
+                    - cron: '20 14 * * 1'
+
+            Este fluxo de trabalho varre:
+
+                - Cada push para a ramificação padrão e a ramificação protegida
+                - Cada solicitação de pull para a ramificação padrão
+                - A ramificação padrão a cada segunda-feira às 14h20 UTC
