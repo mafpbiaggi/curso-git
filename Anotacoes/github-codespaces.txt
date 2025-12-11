@@ -1,0 +1,84 @@
+Codespaces
+
+    É um ambiente virtual de desenvolvimento baseado em núvem que utiliza container.
+
+Ciclo de Vida
+
+    Se inicia quando você cria e se encerra quando você exclui o codespace.
+
+Criando um Codespaces
+
+    - Usando um modelo do GitHub ou qualquer repositório de modelos no GitHub.com para iniciar
+    um novo projeto.
+    - De um branch em seu repositório para um novo trabalho de recursos.
+    - De um pull request aberto para explorar o trabalho em andamento.
+    - Usando um commit no histórico do repositório para investigar um bug em um momento específico.
+
+Processo de criação de um Codespace
+
+    1. Uma máquina virtual e um armazenamento são atribuídos ao seu Codespace.
+    2. Um contêiner é criado.
+    3. É feita uma conexão com o Codespace.
+    4. É feita uma configuração pós-criação.
+
+Salvamento
+
+    Via web, o salvamento automático é habilitado por padrão, no entanto, isso não garante que o conteúdo
+    editado vá para o repositório. Ele fica salvo na máquina virtual para uso futuro. A maneira de atualizar
+    o conteúdo no repositório é igual ao trabalho local, commit + push.
+
+    Obs: Quando um Codespace é excluído, ele exclui as alterações. Caso não tnha sido efetuado nenhum commit
+    e push, as alterações serão perdidas.
+
+Acesso
+
+    Os Codespaces podem ser acessados pelo navegador diretamente (https://github.com.br/Codespaces), ou
+    então, pelas IDEs compatíveis (JetBrains, VS Code ou CLI do GitHub), utilizando a chave.
+
+Tempo Limite
+
+    30 minutos de inatividade. Após esse período, ele deixará de ser executado e manterá os dados do
+    último salvamento.
+
+Conexão com a Internet
+
+    É necessário conexão com a internet para acessar um Codespace. Caso a conexão seja interrompida, o Codespace
+    se torna inacessível, no entanto, as alterações não confirmadas serão salvas e, quando a conexão for reestabelecida
+    o estado do Codespace será o mesmo de antes da falta de comunicação.
+
+Exlusão de Codespaces
+
+    É possível excluir um Codespace a qualquer momento, no entanto se:
+        - Houverem commits que não foram enviados por push, haverá um alerta
+        - Após 30 dias de inatividade, o Codespace será excluído por padrão do GitHub.
+            -- Existe como personalizar o intervalo de exclusão automático.
+
+Personalização de Codespaces
+    
+    Podem ser personalizados atraveś de:
+
+        - Sincronização de configurações: Entre a IDE e o cliente web
+        - Dotfiles
+        - Alteração do shell
+        - Alteração do tipo de computador
+        - Definição do editor padrão
+          -- VS Code (desktop / Web)
+          -- JetBrains Gateway
+          -- JupyterLab
+        - Definição de região padrão
+        - Definição de tempo Limite
+        - Configuração d exclusão automática
+        - Adicionar extensões/plugins
+
+Diferença entre GitHub.dev e GitHub Codespaces
+
+    o GitHub.dev é um editor leve reproduzido no navegador e serve somente para codificar, o Codespaces
+    por sua vez, é baseado em conceitos de computação (container e virtualização). É possível executar
+    testes e validar funcionalidades.
+
+    GitHub.dev = Gratuito
+    Codespaces = Cota mensal para contas pessoais
+
+    É possível continuar a atividade iniciada no GitHub.dev em um Codespace, há uma opção chamada: 'continuar
+    trabalhando ...' que permite a criação de um Codespace para a branch específica.
+    
