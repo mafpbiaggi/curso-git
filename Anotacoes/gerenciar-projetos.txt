@@ -1,0 +1,80 @@
+Projetos
+
+    É uma ferramenta de planejamento e acompanhamento de projetos que oferece exibições flexívieis
+    como tabelas, quadros, linhas de tempo.
+
+Criação de um projeto
+
+    Um projeto pode ser de uma organização ou então pessoal. Pode estar vinculado a um repositório.
+        
+        Obs: Para que hava vínculo entre projeto e repositório, é necessário que o proprietário do projeto
+        seja o mesmo do repositório.
+
+    Ele pode ser criado diretamente na aba Projetos do repositório. Dessa maneira, ele já fica
+    vinculado ao repositório.
+
+
+    -- Atributos
+        --- Nome do projeto
+        --- Descrição (Breve)
+        --- README (Descrição Completa)
+
+Funcionalidades
+
+    - Adição de problemas ou PR (pull requests)
+        É possível adicionar problemas ou pull requests únicos ou em massa.
+    - Pesquisa de problema ou PR existente
+    - Controle de atividades via Fluxo de Trabalho (Workflows)
+    - Conversão de itens de lista em sub-problemas
+
+Organização
+
+    - Crie um campo para rastrear e agrupar por prioridade.
+    - Adicione um campo de iteração.
+    - Crie uma visualização de quadro.
+    - Crie tarefas à partir de problemas criados automaticamente com Fluxo de Trabalho
+
+
+Visibilidade
+
+    Os projetos podem ser públicos e privados.
+        - Quando públicos, todos da internet podem ver
+        - Quando privados, é necessário, ao menos, permissões de leitura para acessá-los
+
+Acesso
+
+    - Organizacionais
+        -- Podem ter níveis de acesso diferentes entre todos da organização, equipe específica,
+        ou colaborador específico
+
+        Níveis de acesso
+
+            - Sem acesso: somente os proprietários e os usuários da organização que receberam acesso
+            individual podem ver o projeto. Os proprietários da organização também são administradores
+            do projeto.
+
+            - Leitura: todos na organização podem ver o projeto. Os proprietários da organização também
+            são administradores do projeto.
+            
+            - Gravação: todos na organização podem ver e editar o projeto. Os proprietários da organização
+            também são administradores do projeto.
+            
+            - Administrador: todos na organização são administradores do projeto.
+
+    - Pessoais
+        -- Podem ter colaboradores convidados.
+
+        Níveis de acesso
+
+            - Leitura: a pessoa pode visualizar o projeto.
+            - Gravação: a pessoa pode visualizar e editar o projeto.
+            - Administrador: a pessoa pode visualizar, editar e adicionar novos colaboradores ao projeto.
+
+Insights
+
+    É possível utilizar essa ferramenta para criar gráficos do projeto.
+    Esses gráficos podem ser atuais ou históricos e podem conter informações sobre o andamento das
+    tarefas.
+
+        Obs: Os gráficos históricos estão disponíveis apenas para os planos GitHub Team (Equipes) ou
+        Enterprise.
