@@ -1,0 +1,34 @@
+Boas práticas de uso do GitHub
+
+Migração de um projeto existente para o GitHub
+
+    Por que migrar? - Vantagens
+    
+        - Controle de versão
+        - Manter o código na núvem (disponobilidade)
+        - Colaboração
+
+    Como migrar?
+    
+        Se o software de controle de versão não for o Git, utilizar o GitHub Migrator.
+
+    Manipulação de arquivos binários ou grandes arquivos
+    
+        Considere utilizar o Git LFS, evite manter os binários no repositório.
+
+    Manipulação de dados sensíveis
+    
+        Utilize o arquivo .gitignore para não enviar senhas e outras informações sensíveis para o repositório.
+    
+
+    Política de segurança
+
+        Descrita no arquivo SECURITY.md, usado para informar diretrizes relacionados à segurança, ou seja,
+        do que não deve ser divulgado publicamente.
+
+É possível importar um projeto (código).. Basta criar o repositório e seguir as orientações, clicando no
+botão "Importar código". O GitHub Migrator fará o resto.
+
+Importação de Projetos externos ao Git
+
+    - Subversion, Mercurial, TFVC
