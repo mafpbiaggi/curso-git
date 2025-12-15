@@ -1,0 +1,128 @@
+Markdown (arquivos .md)
+
+    É uma linguagem de marcação enxuta para edição de conteúdos que substitui o HTML por ser mais
+    fácil de utilizar.
+
+    O GitHub tem a GFM (GitHub-Flavored Markdow).
+
+Enfatizar texto
+
+    - Itálico (* ou _[underline])  => Esse texto está em *itálico* (ou _itálico_)
+    - Negrito (** ou __ [dois underlines]) => Esse texto está em **negrito** (ou __negrito__)
+
+    Mesclar:
+        _Esse texto está em **itálico e negrito**._ => Todo o texto está em itálico,
+        mas somente uma parte está em negrito.
+
+    Para usar * e _ como caracteres epeciais, é necessário usar o caracter de escape (\ -> barra invertida).
+    Ex: \_Esse texto está \*\*sem\*\* formatação\_.
+
+Títulos
+
+    Utilizar # como nivelamento de títulos. de 1 à 6
+    Ex:
+        # Isso é um título H1
+        ## Isso é um título H2
+        [...]
+        ###### Isso é um título H6
+
+Links
+
+    - Imagens
+        ![Link an image.](/learn/azure-devops/shared/media/mara.png)
+
+    - URL
+        [Link to Microsoft Training](/training)
+
+Listas Númerica (Ordered - Ordenadas)
+
+    1. First
+    1. Second
+    1. Third
+
+Lista não-numérica (Non-Ordered - Não ordenadas)
+
+    - First
+        - Nested
+    - Second
+    - Third
+
+    Isso gera uma lista com pontos aninhados.
+
+Tabelas
+
+    O pipe quebra colunos e os - quebram linhas
+    
+    First|Second
+    -|-             => diferencia o cabeçalho (linha de cima) das demais linhas.
+    1|2
+    3|4
+
+Citação
+
+    > Essa é uma citação (ou texto de referência).
+
+HTML Incorporado
+
+    É possível utilizar o HTML incorporado para uma situação que não seja compatível com o Markdown.
+    Ex: Aqui está uma <br />quebra de linha.
+
+Código
+
+    Utilização do caracter crase (`)
+    Ex: `Isso é um código`
+
+    Para blocos de código, usar três crases (```)
+    Ex: ```Esse é
+           um bloco
+           de código
+        ```
+
+    O GFM dá suporte a realce para linguagens, então basta identificar na primeira linha:
+    Ex: ```python
+        Esse bloco de
+        código será tratado
+        como python
+        ```
+    
+Problemas ou PR
+
+    Para referenciar problemas ou pull requests usar o #ID
+    Ex: #3206
+        GH-3206
+        username/repository/#3206
+
+Commit
+
+    Referenciar usando o hash (SHA)
+    Ex: 8304e9c271a5e5ab4fda797304cd7bcca7158c87
+        usuário@8304e9c271a5e5ab4fda797304cd7bcca7158c87
+        usuário/repositorio@8304e9c271a5e5ab4fda797304cd7bcca7158c87
+
+Mencionar usuários
+
+    Utilizar @
+    Ex: @githubteacher
+
+Monitorar lista de tarefas:
+
+    - [x] Tarefa 1
+    - [x] Tarefa 2
+    - [ ] Tarefa 3
+
+Comandos de barra (/)
+
+    /code	Insere um bloco de código Markdown. Escolha o idioma.
+    /details	Insere uma área de detalhes recolhível. Escolha o título e o conteúdo.
+    
+    /saved-replies	Insere uma resposta salva. Escolha entre as respostas salvas para sua
+    conta de usuário. Se você adicionar %cursor% à sua resposta salva, o comando de barra "/"
+    coloca o cursor nesse local.
+    
+    /table	Insere uma tabela Markdown. Escolha o número de colunas e linhas.
+    
+    /tasklist	Insere uma lista de tarefas. Esse comando barra "/" só funciona em uma descrição
+    do problema.
+    
+    /template	Mostra todos os modelos no repositório. Escolha o modelo a ser inserido. Esse comando
+    de barra funciona para modelos de problemas e para um modelo de solicitação de pull.
