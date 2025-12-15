@@ -1,0 +1,17 @@
+Solução de conflitos de mesclagem (merge)
+
+    Conflitos são alterações de mesmo código por desenvolvedores diferentes em branches diferentes
+    que estão tentando ser mescladas.
+
+    O GitHub cria uma arquivo temporário com as diferenças encontradas nos arquivo para que alguém tome
+    uma decisão de manter o conteúdo.
+
+Como evitar conflitos?
+
+    Efetuar pull do branch trabalhado com frequência.
+
+Organizar o histórico
+
+    O comando git rebase (ou git pull --rebase), regenera o histórico do branch de maneira a usar a confirmação
+    HEAD atual do branch base como sua base.
+    
