@@ -1,0 +1,85 @@
+Contribuição em Software Livre
+
+    O software livre é aquele que tem o código aberto e permite a contribuição de todos para ser melhor e mais estável.
+    Identificar como ajudar em um projeto é muito bom. É possível utilizar a ferramenta de pesquisa do GitHub
+    para encontrar uma ferramenta de software que esteja precisando de colaboração. Ou então, verifique nas
+    ferramentas livres já utilizadas se há algum lugar para colaborar.
+
+    Dica: Todas as contribuições são valiosas. Seu nível de experiência ou conhecimento do projeto não importa.
+    Todos nós podemos contribuir com algo. O aspecto mais importante é ajudar.
+
+Familiarização com o projeto
+
+    A maioria dos projetos tem os seguintes arquivos em seu repositório e podem ajudar na contribuição:
+
+    - LICENSE: Contém a licença de código aberto para aquele projeto. Existem diferentes tipos de licença
+    ver: https://choosealicense.com/
+
+    - README: Pode ser considerada uma página inicial do projeto. Nele podem conter as informações sobre
+    como usar o projeto e também como se envolver com a comunidade de desenvolvimento.
+
+    - CONTRIBUTING: Nesse arquivo geralemente há o processo de contribuição e inclui detalhes sobre como
+    configurar o ambiente de desenvolvimento.
+
+    - CODE_OF_CONDUCT: Esse arquivo define as regras básicas para os membros da comunidade.
+
+    Embora nem todos os projetos contem com todos esses arquivos, a presença deles pode apontar para um
+    um projeto amigável, organizado, estruturado e acolhedor.
+
+    Outra maneira de se manter informado sobre o projeto é acessar:
+        - Issues
+        - Avaliar os pull requests
+        - Forums: Alguns projetos tem canais no Slack, Discord, Gitter, etc.
+
+Identificar tarefas para trabalhar
+
+    Uma boa maneira é acessar a área de contribuição do projeto /contribute. Essa área é direcionada para
+    contribuição de iniciantes.
+
+    Atenção aos rótulos (/labels) "help wanted" e "good first issue" para novos colaboradores.
+
+    Usar o seguinte filtro na barra de pesquisa: state:open label:"good first issue", por exemplo.
+
+Patrocínio
+
+    É possível contribuir com um software livre financeiramente, auxiliando as equipes envolvidas no desenvolvimento.
+    Se um projeto estiver qualificado para patrocínio, o botão PATROCINAR será exibido na página inicial do
+    projeto.
+
+Antes de contribuir: Informe sua intenção de colaborar
+
+    Esteja atento a comunicação para que o tempo de ninguém seja desperdiçado. Avalie com atenção se não
+    há destinatários atribuídos aos Problemas (Issues), ou então, se já não há pull requests abertos para o problema
+    que deseja colaborar.
+
+    Caso queira contribuir com algum bug não identificado ou então, algum recurso não existente, certifique-se
+    de usar o modelo de issue (caso algum seja proposto) e expresse claramente a intenção de contribuir com
+    aquela naquela issue.
+
+    Sempre obtenha aprovação dos mantenedores antes de passar para a próxima etapa.
+
+Pull requests
+
+    Após criada, a solicitação de pull pode ser atualizada com novos commits, comentários ou revisões de código.
+    Esse processo continua até que o projeto seja mesclado ou as alterações seja rejeitadas. Quando sua alteração
+    é mesclada, suas alterações foram integradas à base do código do projeto.
+
+    Etapas para a criação de pull request de um repositório público.
+    Obs: Mesmo sendo público, somente os donos do repositório, ou aqueles que tem permissões podem alterar.
+
+    1. Fork
+    2. Clone
+    3. Crie uma branch (git checkout -b <BRANCH_NAME>)
+    4. Commit
+    5. Push (ao repositório "forkeado")
+    6. Criar um pulll request
+    7. Vincular o PR ao Issue
+
+Solicitar diretrizes ou revisões de pull requests, bem como responder à comentários é uma boa forma
+de contribuir.
+
+Exercício de contibuição: https://github.com/firstcontributions/first-contributions
+
+Participação de Comunidades
+
+    Seguir organizações e empresas é uma boa prática.
