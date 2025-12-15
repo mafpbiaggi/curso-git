@@ -1,0 +1,60 @@
+Software InnerSource
+
+    Se beneficia da modelagem de pull request e simplificação de contribuição, mas não quer que o software
+    seja livre.
+
+    É um híbrido de openSourcer com Software Proprietário.
+
+    InnerSource é a prática de aplicar padrões de software livre a projetos com um público-alvo limitado.
+    Por exemplo, uma empresa pode estabelecer um programa InnerSource que espelhe a estrutura de um projeto
+    típico de código aberto, exceto que ele é acessível apenas aos funcionários daquela empresa. Na verdade,
+    é um programa de código aberto por trás do firewall da sua empresa.
+
+    O tipo de repositório que caracteriza um projeto InnerSource é o "Repositório Interno", disponível apenas
+    para clientes GitHub Enterprise.
+
+Níveis de acesso de visibilidade:
+
+    - Leitura: Usado para visualização e discussão
+    - Triagem: Gerenciamento de problemas e pull requests
+    - Gravação: Colaboração e envio de push ativo
+    - Manutenção: Gerenciamento do projeto, sem acesso à ações confidenciais ou destrutivas
+    - Administrador: Acesso total
+
+Adicionar arquivos README para facilitar a documentação do projeto
+
+    Ordem de leitura dos arquivos README, caso haja mais de um. Encontrados em:
+
+        1. .github
+        2. Diretório raiz (root)
+        3. Diretório docs
+
+    Modelos de arquivos README: https://github.com/matiassingers/awesome-readme
+
+Gerenciamento de projetos
+
+    Definição de indivíduos ou equipes responsáveis por revisar as modificações de código: CODEOWNERS
+    Definição de modelos para problemas: Arquivo .github/ISSUE_TEMPLATE.md
+    Definição de modelos para PR: Arquivo .github/PULL_REQUEST_TEMPLATE.md
+
+Medir o sucesso do programa:
+
+    Boas métricas pode ser:
+        - O repositório está recebendo solicitações de pull de fontes externas que corrigem bugs e adicionam
+        recursos?
+
+        - Há participantes ativos em discussões sobre o projeto e o futuro?
+
+        -O programa está inspirando uma expansão do InnerSource que impulsiona os benefícios em outro lugar
+        da organização?
+        
+    Processo de medida, não saída
+        Tempo de retorno da revisão de código
+        Tamanho da solicitação de pull
+        Trabalho em andamento
+        Tempo para abrir
+    Medir com relação a destinos e não absolutos
+    Medir equipes e não indivíduos
+        Número de colaboradores exclusivos de um projeto
+        Número de projetos que reutilizam código
+        Número de @mentions entre equipes
