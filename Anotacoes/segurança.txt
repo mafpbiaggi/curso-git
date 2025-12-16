@@ -1,0 +1,47 @@
+Manter um repositório seguro
+
+    Histórico
+
+        - Há um problema de conhecimento geral: Muitas pessoas assumem entender de segurança, mas não entendem.
+        - O código deve ser criado corretamente e com segurança: O cuidado com a segurança deve fazer parte
+        das etapas de desenvolvimento.
+        - Os aplicativos devem estar em conformidade com as regras e regulamentos.
+
+    Recursos
+
+        Na aba Segurança do GitHub é possível habilitar alguns recursos ao fluxo de trabalho para evitar
+        vulnerabilidades.
+
+        - Políticas de segurança: Arquivo SECURITY.md
+        - Alertas do Dependabot: Notifica quando uma dependência é vulnerável ou malware
+        - Avisos de segurança
+        - Verificação de código
+        - Varredura de segredos: Detecta tokens, credenciais e segredos comprometidos antes do push
+
+Habilitação de regra de proteção de branch
+
+    É possível habilitar regras de proteção para mesclagem de branches protegidos.
+
+        - Execute um build para verificar se as alterações de código podem ser criadas;
+        - Execute um linter para verificar se há erros de digitação e conformidade com as
+        convenções de codificação internas;
+        - Execute testes automatizados para verificar se há alterações de comportamento do código;
+
+Habilitar verisão de código
+
+    Utilizar o arquivo CODEOWNERS para especificar indivíduos ou equipes responsáveis pela revisão
+    de certos códigos ou de todo a base de código.
+
+Detecção de dependências
+
+    Grafos de repositório
+
+        Utilizam manifestos package.json e requirements.txt entre outros para acompanhamento
+        recursivo de dependências.
+
+    Dependabot
+
+        Ferramenta que cruza informações entre as dependências utilizadas e vulnerabilidades conhecidas.
+        Ele utiliza os gráficos de dependência criados para fazer esse cruzamento de informações.
+
+    
