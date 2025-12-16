@@ -1,0 +1,22 @@
+Autenticação de Usuário
+
+    GitHub Enterprise dá suporte a dois métodos de autenticação segura:
+        
+        - 2FA
+        - SSO (Login Único) do SAML
+
+SSO SAML
+
+    O SSO da SAML (linguagem de marcação de declaração de segurança) permite que os proprietários
+    de empresas e organizações controlem o acesso aos recursos do GitHub, como repositórios, problemas
+    e solicitações de pull. A integração do SCIM (System for Cross-domain Identity Management) aprimora
+    o controle de acesso automatizando o provisionamento e o desprovisionamento do usuário.
+
+    Provedores SCIM com suporte
+        O GitHub dá suporte nativo a:
+
+        Okta
+        Microsoft Entra ID
+        OneLogin
+        Identidade do Ping
+        Google Workspace
