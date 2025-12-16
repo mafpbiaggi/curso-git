@@ -1,0 +1,11 @@
+Pesquisar no GitHub
+
+    is:open is:issue assignee:@me	Problemas em aberto atribuídos ao usuário atual (@me)
+    is:closed is:pr author:contoso	Solicitações de pull fechadas criadas por @contoso
+    is:pr sidebar in:comments	Solicitações de pull nas quais "barra lateral" é mencionada nos comentários
+    is:open is:issue label:bug -linked:pr
+
+Comando git blame
+
+    Exibe o histório de commits de um arquivo. Ele facilita a visualização de alterações no arquivo
+    específico.
