@@ -1,0 +1,57 @@
+Administração do GitHub
+
+    - Objetivo: Compreender os níveis hierarquicos presentes no GitHub e como administrar os acessos
+    dentro desses níveis.
+
+Hibilitar sincronismo de equipes via provedor de identidade (idP).
+
+    Recurso para replicar as alterações no GitHub automaticamente. Sem a necessidade de ações manuais ou
+    scripts personalizados.
+
+    Os mantenedores ou administradores podem:
+
+        - Criar uma nova equipe ou alterar equipe pai
+        - Excluir ou renomear equipe
+        - Adicionar membros da organização a uma equipe
+        - Adicionar colaboradores externos (não-membros da organização)
+        - Habilitar ou desabilitar discussões
+        - Alterar visibilidade dentro da equipe
+        - Gerenciar atribuição de revisão de código
+        - Agendar lembretes
+        - Definir imagem de perfil da equipe
+
+        Observação: Mantenedor - Nível equipe
+                    Proprietário - Nível organização / empresa
+
+Tipos de autenticação:
+
+    - Login ùnico (SAML): permite que os colaboradores vinculem identidades externas idP à conta
+    existente do GitHub. (GitHub Enterprise)
+    - Usuário e senha (padrão)
+    - Token: Acesso pessoal e uso da API
+    - Chave SSH
+    - Chave de implantação (para acesso a um repositório apenas)
+
+    Segurança adicional
+        - Autenticação de 2 fatores
+        - SSO do SAML: Permite proteger recursos da organização de forma centralizada
+        - LDAP (GitHub Entreprise Server)
+
+
+Nível de permissão organização
+
+    - Proprietário: Permite adicionar ou excluir membros da organização
+    - Membro: Gerenciar repositórios e equipes
+    - Moderador: Bloquear/Desbloquear colaboradores, definir limites de interação e ocultar comentários
+    - Gerente de Cobrança: Visualizar e editar informações de Cobrança
+    - Gerente de Segurança: Gerenciar alertas de segurança em toda a organização
+    - Colaborador externo: Não são membros explícitos, mas podem acessar um ou mais repositórios delegados
+
+Nível de permissão empresa
+
+    - Proprietário
+    - Membro
+    - Gerente de Cobrança
+    - Colaborador convidado
+
+É possível integrar o uso do AD, assim, todos os acessos e políticas ficam centralizados.
