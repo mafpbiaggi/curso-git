@@ -1,0 +1,48 @@
+Permissões de instalação e sincronização do Azure AD:
+    - Ler todas as credenciais
+
+Onde o usuário se autentica depois de habilitar o SAML:
+    - SSO
+
+Boa maneira de garantir as versões mais seguras de dependências:
+    - Habilite o Dependabot
+
+Acessar o site do gitHub sem precisar de credenciais adicionais:
+    - Logon Único
+
+Como criar um marco no GitHub:
+    - Acesse a aba Issues, depois clique em Marcos (Labels), depois em 'Novo Marco'.
+
+Como alterar páginas Wiki?
+    - Qualquer um com permissões adequadas pode fazer essa tarefa
+
+Software Livre VS InnerSource
+    - Sâo fundamentalmente os mesmos, mas innersouce tem acesso limitado a pessoas dentro de uma organização.
+
+Relatórios de bugs com baixa qualidade
+    - Usar o ISSUE_TEMPLATE.md
+
+Criar um novo problema:
+    - CLicar em New Issua (ou nova solicitação).
+
+IDEs com suporte para o GitHub Copilot:
+    - VS Code, Visual Studio, Spyder, Eclipse
+
+O que acontece quando há perda de conexão com a internet enquanto usamos codespaces:
+    - A conexão com o codespace é perdida até que a internet volte.
+
+Função primária do GitHub Actions:
+    - Todas as alternativas que incluam automatização, facilitação de CI e CD e integração de infraestrutura
+    como código.
+
+Tipos de GitHub Actions:
+    - Container e Javascript
+
+TIpos de exibições em Projetos do GitHub
+    - Tabela, placa e roteiro
+
+Projetos: integração = Fases sequenciais
+Projetos: Agrupamento de Prioridade = Seleção única
+
+Diferença entre Issue, Discussão e PR:
+    - Issue sugerir alterações, Discussões para tópicos gerais e PR para revisão de código e mesclagem.
