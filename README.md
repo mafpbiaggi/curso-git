@@ -25,5 +25,5 @@ curso-git/
 ```
 
 # Dados do Aluno
-**Nome**: Marco Aurélio Biaggi ([@mafpbiaggi](https://github.com/mafpbiaggi)  
+**Nome**: Marco Aurélio Biaggi ([@mafpbiaggi](https://github.com/mafpbiaggi))  
 **E-mail**: mafpbiaggi@gmail.com.br
